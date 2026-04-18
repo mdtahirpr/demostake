@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio — DemoStake</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-hex">⬡</span> DemoStake</a>
+      <div class="nav-links">
+        <a href="properties.html">Properties</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+      </div>
+      <div class="nav-cta">
+        <div class="user-pill">
+          <div class="user-av">A</div>
+          <span>Ahmed</span>
+        </div>
+        <a href="index.html" class="btn-ghost">Sign out</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="properties.html">Properties</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html">Sign out</a>
+    </div>
+  </nav>
+
+  <div class="page-hero sm">
+    <div class="container">
+      <h1>My portfolio</h1>
+      <p>Track your investments and rental income</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- SUMMARY CARDS -->
+      <div class="portfolio-summary">
+        <div class="summary-card green-card">
+          <p class="sc-label">Total invested</p>
+          <p class="sc-val">AED 3,500</p>
+          <p class="sc-sub">Across 2 properties</p>
+        </div>
+        <div class="summary-card">
+          <p class="sc-label">Total earned</p>
+          <p class="sc-val green">AED 294</p>
+          <p class="sc-sub">Rental income to date</p>
+        </div>
+        <div class="summary-card">
+          <p class="sc-label">Average return</p>
+          <p class="sc-val green">8.4%</p>
+          <p class="sc-sub">Annual yield</p>
+        </div>
+        <div class="summary-card">
+          <p class="sc-label">Next payout</p>
+          <p class="sc-val">Apr 30</p>
+          <p class="sc-sub">Estimated AED 49</p>
+        </div>
+      </div>
+
+      <!-- INVESTMENTS TABLE -->
+      <div class="portfolio-section">
+        <div class="port-section-header">
+          <h3>My investments</h3>
+          <a href="properties.html" class="btn-outline sm">+ Add investment</a>
+        </div>
+        <div class="port-table">
+          <div class="port-table-head">
+            <span>Property</span>
+            <span>Invested</span>
+            <span>Earned</span>
+            <span>Return</span>
+            <span>Status</span>
+            <span></span>
+          </div>
+          <div class="port-table-row">
+            <div class="port-prop-cell">
+              <div class="port-thumb" style="background:linear-gradient(135deg,#1a9e72,#0f6e50)">🏙️</div>
+              <div>
+                <p class="port-prop-name">Marina Heights 4B</p>
+                <p class="port-prop-loc">Dubai Marina, UAE</p>
+              </div>
+            </div>
+            <span class="port-cell">AED 2,000</span>
+            <span class="port-cell green">AED 168</span>
+            <span class="port-cell green">8.4%</span>
+            <span class="port-cell"><span class="badge-status green">Active</span></span>
+            <span class="port-cell"><a href="property-detail.html?id=0" class="port-link">View →</a></span>
+          </div>
+          <div class="port-table-row">
+            <div class="port-prop-cell">
+              <div class="port-thumb" style="background:linear-gradient(135deg,#185fa5,#0c447c)">🏢</div>
+              <div>
+                <p class="port-prop-name">King Abdullah Business Hub</p>
+                <p class="port-prop-loc">Riyadh, Saudi Arabia</p>
+              </div>
+            </div>
+            <span class="port-cell">AED 1,500</span>
+            <span class="port-cell green">AED 126</span>
+            <span class="port-cell green">10.2%</span>
+            <span class="port-cell"><span class="badge-status green">Active</span></span>
+            <span class="port-cell"><a href="property-detail.html?id=1" class="port-link">View →</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EARNINGS HISTORY -->
+      <div class="portfolio-section">
+        <h3>Earnings history</h3>
+        <div class="earnings-list">
+          <div class="earning-row"><div><p class="earn-name">Marina Heights 4B — March rental</p><p class="earn-date">March 31, 2025</p></div><span class="earn-amount green">+AED 84</span></div>
+          <div class="earning-row"><div><p class="earn-name">King Abdullah Hub — March rental</p><p class="earn-date">March 31, 2025</p></div><span class="earn-amount green">+AED 63</span></div>
+          <div class="earning-row"><div><p class="earn-name">Marina Heights 4B — February rental</p><p class="earn-date">February 28, 2025</p></div><span class="earn-amount green">+AED 84</span></div>
+          <div class="earning-row"><div><p class="earn-name">King Abdullah Hub — February rental</p><p class="earn-date">February 28, 2025</p></div><span class="earn-amount green">+AED 63</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer mini">
+    <div class="footer-bottom"><p>© 2025 DemoStake · This is a prototype for demonstration purposes only.</p></div>
+  </footer>
+  <script>function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open');}</script>
+</body>
+</html>

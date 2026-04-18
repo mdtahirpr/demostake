@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How it works — DemoStake</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-hex">⬡</span> DemoStake</a>
+      <div class="nav-links">
+        <a href="properties.html">Properties</a>
+        <a href="how-it-works.html" class="active">How it works</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn-ghost">Sign in</a>
+        <a href="signup.html" class="btn-primary">Get started</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="properties.html">Properties</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="login.html">Sign in</a>
+      <a href="signup.html" class="btn-primary">Get started</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="section-label white">Simple &amp; transparent</div>
+      <h1>How DemoStake works</h1>
+      <p>Real estate investing made simple, accessible, and borderless.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <div class="hiw-num">01</div>
+          <div class="hiw-body">
+            <h3>Create your free account</h3>
+            <p>Sign up with your email and basic details. Verify your identity with a government ID. The whole process takes under 3 minutes — no paperwork, no bank visits.</p>
+            <a href="signup.html" class="btn-outline sm">Create account →</a>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">02</div>
+          <div class="hiw-body">
+            <h3>Browse curated properties</h3>
+            <p>Our team of real estate experts hand-picks every property. You'll see full financials, tenant history, location data, and projected returns before committing a single dirham.</p>
+            <a href="properties.html" class="btn-outline sm">Browse properties →</a>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">03</div>
+          <div class="hiw-body">
+            <h3>Invest from AED 500</h3>
+            <p>Choose how much to invest — from AED 500 up to your desired amount. You're buying fractional ownership. Your shares are legally registered in your name.</p>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">04</div>
+          <div class="hiw-body">
+            <h3>Earn rental income monthly</h3>
+            <p>Rental income is collected, verified, and distributed to your account every month. We handle everything — finding tenants, maintenance, insurance, and legal compliance.</p>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">05</div>
+          <div class="hiw-body">
+            <h3>Exit when you're ready</h3>
+            <p>Sell your shares during our bi-annual exit windows at current market price. Or list them on our secondary marketplace anytime for early liquidity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-label">Trust &amp; security</div>
+      <h2 class="section-title">Your investment is protected</h2>
+      <div class="trust-big-grid">
+        <div class="trust-big-card">
+          <div class="tbg-icon">🏛️</div>
+          <h3>DFSA regulated</h3>
+          <p>DemoStake is licensed and regulated by the Dubai Financial Services Authority — one of the most prestigious financial regulators in the Middle East.</p>
+        </div>
+        <div class="trust-big-card">
+          <div class="tbg-icon">🇸🇦</div>
+          <h3>CMA licensed</h3>
+          <p>Our Saudi Arabia operations are licensed by the Capital Market Authority (CMA) under permit number 05-53-2023.</p>
+        </div>
+        <div class="trust-big-card">
+          <div class="tbg-icon">🔒</div>
+          <h3>Segregated accounts</h3>
+          <p>Your funds are always held in segregated client accounts, completely separate from DemoStake's operational funds.</p>
+        </div>
+        <div class="trust-big-card">
+          <div class="tbg-icon">☪️</div>
+          <h3>Shariah-compliant</h3>
+          <p>All properties and investment structures are vetted and certified Shariah-compliant by our independent advisory board.</p>
+        </div>
+        <div class="trust-big-card">
+          <div class="tbg-icon">📋</div>
+          <h3>Independent valuations</h3>
+          <p>Every property is independently valued by RICS-certified surveyors before being listed on the platform.</p>
+        </div>
+        <div class="trust-big-card">
+          <div class="tbg-icon">📊</div>
+          <h3>Full transparency</h3>
+          <p>All financial reports, tenancy agreements, and maintenance records are available for every investor to view at any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Common questions</div>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What is fractional real estate investing? <span class="faq-arrow">↓</span></div>
+          <div class="faq-a">Fractional investing lets you buy a percentage of a property instead of the whole thing. You earn rental income and price appreciation proportional to your ownership share. DemoStake handles all the legal structure so your shares are formally registered.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How are returns calculated? <span class="faq-arrow">↓</span></div>
+          <div class="faq-a">Returns come from two sources: rental income (paid monthly) and capital appreciation (realised when the property is sold). The projected annual return shown on each listing combines both, but actual returns may vary based on occupancy and market conditions.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Can I withdraw my money early? <span class="faq-arrow">↓</span></div>
+          <div class="faq-a">You can sell your shares on our secondary marketplace at any time, subject to buyer availability. We also run bi-annual exit windows where DemoStake facilitates liquidity for all investors who wish to exit.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Who can invest on DemoStake? <span class="faq-arrow">↓</span></div>
+          <div class="faq-a">DemoStake is open to investors from 186+ countries. You need to be 18 or older and pass our KYC (Know Your Customer) identity verification. Some restrictions may apply based on your country of residence.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What are the fees? <span class="faq-arrow">↓</span></div>
+          <div class="faq-a">DemoStake charges a management fee of 15% of rental income to cover property management, tenant services, and maintenance. There are no hidden fees, no subscription charges, and no fees to create an account.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to start investing?</h2>
+      <p>Join thousands of investors already earning passive income.</p>
+      <a href="signup.html" class="btn-primary large">Create free account →</a>
+    </div>
+  </section>
+
+  <footer class="footer mini">
+    <div class="footer-bottom"><p>© 2025 DemoStake · This is a prototype for demonstration purposes only.</p></div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+    function toggleFaq(el) {
+      el.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

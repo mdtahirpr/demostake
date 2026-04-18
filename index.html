@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DemoStake — Invest in Dubai & Saudi Real Estate</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-hex">⬡</span> DemoStake
+      </a>
+      <div class="nav-links">
+        <a href="properties.html">Properties</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn-ghost">Sign in</a>
+        <a href="signup.html" class="btn-primary">Get started</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="properties.html">Properties</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="login.html">Sign in</a>
+      <a href="signup.html" class="btn-primary">Get started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">🔒 DFSA &amp; CMA Regulated</div>
+      <h1>Invest in Dubai &amp; Saudi<br />real estate from <span class="highlight">AED 500</span></h1>
+      <p class="hero-sub">Fractional ownership of premium properties. Earn rental income. No paperwork, no middlemen.</p>
+      <div class="hero-actions">
+        <a href="signup.html" class="btn-primary large">Start investing free</a>
+        <a href="how-it-works.html" class="btn-ghost large">See how it works →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-val">AED 1.3B+</span><span class="stat-label">Total transactions</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-val">500+</span><span class="stat-label">Funded properties</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-val">1M+</span><span class="stat-label">Investors worldwide</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-val">8–12%</span><span class="stat-label">Annual returns</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card floating">
+        <div class="hc-tag green">Dubai Marina</div>
+        <div class="hc-name">Marina Heights 4B</div>
+        <div class="hc-row"><span>Annual return</span><span class="hc-green">8.4%</span></div>
+        <div class="hc-row"><span>Funded</span><span>94%</span></div>
+        <div class="hc-bar"><div class="hc-bar-fill" style="width:94%"></div></div>
+        <div class="hc-row"><span>Min. invest</span><span>AED 500</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <span>As seen in</span>
+      <div class="trust-logos">
+        <span>Forbes</span>
+        <span>Bloomberg</span>
+        <span>TechCrunch</span>
+        <span>Arabian Business</span>
+        <span>Time</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Simple process</div>
+      <h2 class="section-title">Invest in 3 steps</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Create your account</h3>
+          <p>Sign up in under 3 minutes. Verify your identity once and you're ready to invest.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Pick a property</h3>
+          <p>Browse curated properties in Dubai and Saudi Arabia. Filter by return, location, and type.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Earn every month</h3>
+          <p>Receive your share of rental income. We handle tenants, maintenance, and everything else.</p>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="how-it-works.html" class="btn-outline">Learn more about how it works →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROPERTIES -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-label">Live opportunities</div>
+      <h2 class="section-title">Featured properties</h2>
+      <div class="props-preview-grid" id="featured-props"></div>
+      <div class="section-cta">
+        <a href="properties.html" class="btn-primary">View all properties →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY DEMOSTAKE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Why DemoStake</div>
+      <h2 class="section-title">Built for every investor</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏙️</div>
+          <h3>Prime locations</h3>
+          <p>Every property is hand-picked in high-growth markets — Dubai Marina, Downtown, Riyadh CBD, and more.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💸</div>
+          <h3>Start from AED 500</h3>
+          <p>No need to buy a whole property. Own a fraction and earn proportional income.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Fully regulated</h3>
+          <p>Licensed by DFSA (Dubai) and CMA (Saudi Arabia). Your funds are always in segregated accounts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Full transparency</h3>
+          <p>See every detail before you invest — financials, tenant history, maintenance records, and legal docs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">☪️</div>
+          <h3>Shariah-compliant</h3>
+          <p>All investments are vetted and certified by our independent Shariah advisory board.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚪</div>
+          <h3>Easy exit</h3>
+          <p>Sell your shares during our bi-annual exit windows or on our secondary market anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to start earning from real estate?</h2>
+      <p>Join thousands of investors already earning passive income through DemoStake.</p>
+      <a href="signup.html" class="btn-primary large">Create free account →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-hex">⬡</span> DemoStake</div>
+        <p>Fractional real estate investing in Dubai &amp; Saudi Arabia.</p>
+        <p class="footer-legal">DemoStake is regulated by the Dubai Financial Services Authority (DFSA) and the Capital Market Authority (CMA) of Saudi Arabia. All investments carry risk.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-title">Invest</p>
+          <a href="properties.html">Browse properties</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="portfolio.html">My portfolio</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Company</p>
+          <a href="#">About us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Legal</p>
+          <a href="#">Terms of service</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Risk disclosure</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 DemoStake. This is a prototype for demonstration purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    renderFeaturedProps();
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

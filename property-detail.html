@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Detail — DemoStake</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-hex">⬡</span> DemoStake</a>
+      <div class="nav-links">
+        <a href="properties.html" class="active">Properties</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn-ghost">Sign in</a>
+        <a href="signup.html" class="btn-primary">Get started</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="properties.html">Properties</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="login.html">Sign in</a>
+      <a href="signup.html" class="btn-primary">Get started</a>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top:24px">
+    <a href="properties.html" class="back-link">← Back to properties</a>
+  </div>
+
+  <section class="section" style="padding-top:16px">
+    <div class="container">
+      <div class="detail-layout">
+
+        <!-- LEFT -->
+        <div class="detail-left">
+          <div class="detail-hero-img" id="detail-hero"></div>
+
+          <div class="detail-tabs">
+            <button class="dtab active" onclick="switchTab('overview', this)">Overview</button>
+            <button class="dtab" onclick="switchTab('documents', this)">Documents</button>
+            <button class="dtab" onclick="switchTab('updates', this)">Updates</button>
+          </div>
+
+          <div class="dtab-content active" id="tab-overview">
+            <div class="detail-section-card">
+              <h3>About this property</h3>
+              <p id="detail-desc" class="detail-desc-text"></p>
+            </div>
+            <div class="detail-section-card">
+              <h3>Property details</h3>
+              <div id="detail-facts" class="fact-table"></div>
+            </div>
+            <div class="detail-section-card">
+              <h3>Location</h3>
+              <div class="map-placeholder" id="detail-map">
+                <div class="map-pin">📍</div>
+                <p id="detail-location-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dtab-content" id="tab-documents">
+            <div class="detail-section-card">
+              <h3>Investment documents</h3>
+              <div class="doc-list">
+                <div class="doc-item"><span class="doc-icon">📄</span><div><p class="doc-name">Property valuation report</p><p class="doc-size">PDF · 2.4 MB</p></div><a href="#" class="doc-dl">Download</a></div>
+                <div class="doc-item"><span class="doc-icon">📄</span><div><p class="doc-name">Title deed &amp; ownership structure</p><p class="doc-size">PDF · 1.1 MB</p></div><a href="#" class="doc-dl">Download</a></div>
+                <div class="doc-item"><span class="doc-icon">📄</span><div><p class="doc-name">Rental income history</p><p class="doc-size">PDF · 890 KB</p></div><a href="#" class="doc-dl">Download</a></div>
+                <div class="doc-item"><span class="doc-icon">📄</span><div><p class="doc-name">Investment terms &amp; conditions</p><p class="doc-size">PDF · 3.2 MB</p></div><a href="#" class="doc-dl">Download</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dtab-content" id="tab-updates">
+            <div class="detail-section-card">
+              <h3>Property updates</h3>
+              <div class="updates-list">
+                <div class="update-item"><span class="update-dot green"></span><div><p class="update-title">Rental income distributed</p><p class="update-date">March 2025 · AED 168 distributed to investors</p></div></div>
+                <div class="update-item"><span class="update-dot green"></span><div><p class="update-title">New tenant signed</p><p class="update-date">January 2025 · 12-month contract at market rate</p></div></div>
+                <div class="update-item"><span class="update-dot amber"></span><div><p class="update-title">Maintenance completed</p><p class="update-date">November 2024 · AC servicing &amp; minor repairs</p></div></div>
+                <div class="update-item"><span class="update-dot green"></span><div><p class="update-title">Property fully funded</p><p class="update-date">September 2024 · 312 investors participated</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: INVEST CARD -->
+        <div class="detail-right">
+          <div class="invest-card sticky">
+            <div id="detail-header-card"></div>
+            <div class="progress-section">
+              <div class="prog-label-row">
+                <span id="prog-raised"></span>
+                <span id="prog-pct" class="prog-pct"></span>
+              </div>
+              <div class="prog-bg"><div class="prog-fill" id="prog-bar"></div></div>
+              <div class="prog-label-row" style="margin-top:6px">
+                <span id="prog-investors" style="font-size:12px;color:#888"></span>
+                <span id="prog-remaining" style="font-size:12px;color:#888"></span>
+              </div>
+            </div>
+            <div class="invest-form">
+              <label class="invest-label">How much would you like to invest?</label>
+              <div class="invest-input-wrap">
+                <span class="invest-curr" id="invest-curr-symbol">AED</span>
+                <input type="number" id="invest-input" value="500" min="500" step="100" oninput="calcReturn()" />
+              </div>
+              <div class="quick-amounts" id="quick-amounts">
+                <button onclick="setAmount(500)">500</button>
+                <button onclick="setAmount(1000)">1,000</button>
+                <button onclick="setAmount(5000)">5,000</button>
+                <button onclick="setAmount(10000)">10,000</button>
+              </div>
+              <div class="return-box">
+                <div class="return-row"><span>Estimated yearly return</span><span id="ret-yearly" class="ret-val">—</span></div>
+                <div class="return-row"><span>Estimated monthly</span><span id="ret-monthly" class="ret-val-sm">—</span></div>
+                <div class="return-row"><span>5-year projected total</span><span id="ret-5yr" class="ret-val-sm">—</span></div>
+              </div>
+            </div>
+            <a href="signup.html" class="btn-primary full" id="invest-btn">Invest now</a>
+            <p class="invest-legal">By investing you agree to our <a href="#">Terms &amp; Conditions</a>. All investments carry risk. Returns are not guaranteed.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMILAR PROPERTIES -->
+  <section class="section bg-cream">
+    <div class="container">
+      <h2 class="section-title">Similar properties</h2>
+      <div class="props-preview-grid" id="similar-props"></div>
+    </div>
+  </section>
+
+  <footer class="footer mini">
+    <div class="footer-bottom">
+      <p>© 2025 DemoStake · This is a prototype for demonstration purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    loadDetailPage();
+    function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+    function switchTab(tab, el) {
+      document.querySelectorAll('.dtab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.dtab-content').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+    function setAmount(val) {
+      document.getElementById('invest-input').value = val;
+      calcReturn();
+    }
+  </script>
+</body>
+</html>
